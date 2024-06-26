@@ -2,6 +2,7 @@ package com.example.kafkaconsumer.mapper;
 
 import com.example.kafkaconsumer.dto.ClientDto;
 import com.example.kafkaconsumer.entity.Client;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,7 +13,7 @@ public class ClientMapper {
 
     private final ObjectMapper objectMapper;
 
-    public ClientDto mapToClientDto(String message) throws Exception {
+    public ClientDto mapToClientDto(String message) throws JsonProcessingException {
         return objectMapper.readValue(message, ClientDto.class);
     }
 

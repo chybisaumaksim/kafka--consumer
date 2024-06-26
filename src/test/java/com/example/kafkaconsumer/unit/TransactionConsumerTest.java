@@ -1,4 +1,4 @@
-package com.example.kafkaconsumer;
+package com.example.kafkaconsumer.unit;
 
 import com.example.kafkaconsumer.consumer.TransactionConsumer;
 import com.example.kafkaconsumer.dto.TransactionDto;
@@ -40,7 +40,7 @@ class TransactionConsumerTest {
                 "{\n" + "  \"bank\": \"bank\",\n" + "  \"clientId\": 1,\n" + "  " + "\"transactionType\": \"INCOME\",\n" + "  \"quantity\": 0,\n" + "  \"price\": 0,\n" + "  " + "\"createdAt\": \"2024-06-24T14:37:28.336Z\"\n" + "}";
         Client client = new Client(1L, "mail@gmail.com");
         Transaction transaction =
-                new Transaction(1L, "bank", TransactionType.INCOME, 12.0, LocalDateTime.now(), client);
+                new Transaction(1L, "bank", TransactionType.INCOME, 6, 2.0, 12.0, LocalDateTime.now(), client);
         TransactionDto transactionDto =
                 new TransactionDto("bank", 1L, TransactionType.INCOME, 1, 12.0, LocalDateTime.now());
         ArgumentCaptor<Transaction> transactionArgumentCaptor = ArgumentCaptor.forClass(Transaction.class);

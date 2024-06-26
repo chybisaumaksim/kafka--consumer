@@ -1,4 +1,4 @@
-package com.example.kafkaconsumer;
+package com.example.kafkaconsumer.unit;
 
 import com.example.kafkaconsumer.consumer.ClientConsumer;
 import com.example.kafkaconsumer.dto.ClientDto;

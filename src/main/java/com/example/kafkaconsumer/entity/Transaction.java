@@ -27,6 +27,10 @@ public class Transaction {
     @Column(name = "order_type")
     private TransactionType orderType;
 
+    private Integer quantity;
+
+    private Double price;
+
     private Double totalCost;
 
     @Column(name = "create_at")

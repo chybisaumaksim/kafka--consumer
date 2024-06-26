@@ -12,6 +12,8 @@ CREATE TABLE IF NOT EXISTS transactions
     bank             VARCHAR(255)     NOT NULL,
     client_id        BIGINT           NOT NULL,
     transaction_type VARCHAR(50)      NOT NULL,
+    quantity         INTEGER          NOT NULL,
+    price            DOUBLE PRECISION NOT NULL,
     created_at       TIMESTAMP        NOT NULL,
     total_cost       DOUBLE PRECISION NOT NULL,
     FOREIGN KEY (client_id) REFERENCES clients (client_id)

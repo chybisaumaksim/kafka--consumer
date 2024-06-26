@@ -24,6 +24,8 @@ public class TransactionMapper {
                 .bank(transactionDto.getBank())
                 .client(clientRepository.getReferenceById(transactionDto.getClientId()))
                 .totalCost(transactionDto.getQuantity() * transactionDto.getPrice())
+                .quantity(transactionDto.getQuantity())
+                .price(transactionDto.getPrice())
                 .orderType(transactionDto.getTransactionType())
                 .createdAt(transactionDto.getCreatedAt())
                 .build();
